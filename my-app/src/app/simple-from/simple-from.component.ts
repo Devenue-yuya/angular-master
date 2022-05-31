@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./simple-from.component.sass']
 })
 export class SimpleFromComponent implements OnInit {
+  result:string="足し算しましょう";
 
+  addAndShow():void {
+    this.result="これはテストです";
+  }
   constructor() { }
 
   ngOnInit(): void {
