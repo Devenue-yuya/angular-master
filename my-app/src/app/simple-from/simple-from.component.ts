@@ -7,13 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimpleFromComponent implements OnInit {
   result:string="足し算しましょう";
+  text1:string="0";
+  text2:string="0";
 
   addAndShow():void {
-    this.result="これはテストです";
-  }
-  constructor() { }
+    let forResult:string="正しい値を入力してください";
+    let int1:number;
+    let int2:number;
 
-  ngOnInit(): void {
-  }
+    int1=Number(this.text1);
+    int2=Number(this.text2);
 
+
+    if (!Number.isNaN(int1) && !Number.isNaN(int2)){
+    forResult = `${int1}+${int2}=${int1+int2}`;
+  }
+  this.result=forResult;
+}
+
+constructor() { }
+
+ngOnInit(): void {
+  }
 }
