@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl,FormGroup,FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-controls',
@@ -6,8 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./controls.component.sass']
 })
 export class ControlsComponent implements OnInit {
+  coffeeForm:FormGroup;
 
-  constructor() { }
+
+  constructor(private fb: FormBuilder) {
+    this.coffeeForm=this.fb.group({
+
+  name: "ブレンド",
+
+  taste: "バランスのよい口当たり"
+
+  });
+
+   }
 
   ngOnInit(): void {
   }
