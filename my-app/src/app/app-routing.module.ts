@@ -12,6 +12,7 @@ const routes: Routes = [];
   imports: [
     CommonModule,
     RouterModule.forRoot([
+      {path:'', redirectTo: '/simple-from', pathMatch: 'full'},
       {path:'simple-from', component:SimpleFromComponent},
       {path:'controls', component:ControlsComponent},
     ]
