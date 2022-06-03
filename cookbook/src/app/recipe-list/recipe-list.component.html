@@ -1,4 +1,8 @@
 <h2>レシピ検索システム</h2>
+検索:
+  <input #keyword size = "20" />
+  <button (click)="seachRecipe(keyword.value)">Search</button>
+  <!-- <button (click)="hoge()">Search</button> -->
 <table>
   <tr><th>名前</th><th>所要時間</th><th>ひとこと</th><th>主な材料</tr>
     <tr *ngFor="let recipe of recipedate">

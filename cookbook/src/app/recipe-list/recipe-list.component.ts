@@ -11,10 +11,17 @@ import {RecipeService} from '../recipe.service';
 })
 export class RecipeListComponent implements OnInit {
   recipedate !: Recipe[];
+  test = "test";
   constructor(private rsv: RecipeService) { }
 
   ngOnInit() {
     this.recipedate =this.rsv.getRecipedate();
   }
+
+  seachRecipe (keyword:string){
+    console.log("##",keyword)
+
+   this.recipedate = this.rsv.seachRecipe(keyword)
+ }
 
 }
