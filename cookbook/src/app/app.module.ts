@@ -1,23 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SimpleFromComponent } from './simple-from/simple-from.component';
-import { ControlsComponent } from './controls/controls.component';
+import { RecipeListComponent } from './recipe-list/recipe-list.component';
+import { RecipDateComponent } from './recip-date/recip-date.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleFromComponent,
-    ControlsComponent
+    RecipeListComponent,
+    RecipDateComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
