@@ -13,13 +13,13 @@ import {RECIPEDATE} from '../recipe/recipedate';
   styleUrls: ['./recip-date.component.sass']
 })
 export class RecipDateComponent implements OnInit {
-  recipid !:string;
-  recip !:Recipe;
+  recipeid !:string;
+  recipe !:Recipe;
   constructor(private route:ActivatedRoute, private location:Location) { }
 
   ngOnInit() {
-    this.recipid= this.route.snapshot.paramMap.get('id')!;
-    // this.recipe = RECIPEDATE.find (recipe=>recipe.id.toString()==this.recipeid);
+    this.recipeid= this.route.snapshot.paramMap.get('id')!;
+    this.recipe = RECIPEDATE.find (recipe=>recipe.id==1)!;
   }
 
 backToList(){
